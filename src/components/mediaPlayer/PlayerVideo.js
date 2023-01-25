@@ -28,7 +28,7 @@ const PlayerVideo = ({ srcCheck, currentSong, handleKeyDown, handlePause, audioR
     // 
     return (
         // <Plyr source={videoSrc} />
-        <div className="container" id={`videoId${currentSong?.name}`} key={currentSong?.name} style={{ margin: '50px' }}>
+        <div className="container" id={`videoId${currentSong?.name}`} key={currentSong?.name} style={{ margin: 'auto' ,width:'70%'}}>
             {currentSong && <video ref={audioRef} autoplay id="video"  playsinline crossorigin controls currentTime={currentTime} onKeyDown={handleKeyDown} width='90%'>
                 {/* <source src={currentSong.multipleLanguages.eng.low + "#t=" + currentTime + "," + endTime} type="video/mp4" size="576" />
                 <source src={currentSong.multipleLanguages.eng.medium + "#t=" + currentTime + "," + endTime} type="video/mp4" size="720" />
