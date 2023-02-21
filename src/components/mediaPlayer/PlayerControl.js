@@ -10,6 +10,7 @@ import {
   faBackward,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Player.css";
+import { useEffect } from "react";
 const PlayerControl = ({
   currentSong,
   isPlaying,
@@ -52,6 +53,8 @@ const PlayerControl = ({
     audioRef.current.currentTime = e.target.value;
     setSongInfo({ ...songInfo, currentTime: e.target.value });
   };
+
+
   const fastForward = () => {
     audioRef.current.currentTime += 10;
   };
